@@ -21,8 +21,14 @@ exports.config = {
 
   framework: 'mocha',
 
-  reporters: ['spec'],
-
+  reporters: [
+  'spec',
+  ['extent', {
+    outputDir: 'reports/extent',
+    reportTitle: 'QA Automation Report',
+    takeScreenshotsDuringTests: false
+  }]
+],
   mochaOpts: {
     timeout: 60000
   }
