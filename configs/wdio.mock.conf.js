@@ -1,7 +1,10 @@
 
 exports.config = {
   runner: 'local',
-  specs: ['./test/specs/**/*.spec.js'],
+  specs: [
+  process.cwd() + '/test/specs/**/*.spec.js'
+],
+
   maxInstances: 1,
   capabilities: [{
     browserName: 'chrome'
