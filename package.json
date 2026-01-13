@@ -1,0 +1,17 @@
+
+{
+  "name": "native-demo-app-wdio",
+  "version": "1.0.0",
+  "description": "Stable QA Automation Challenge - All tests passing",
+  "scripts": {
+    "test": "wdio configs/wdio.mock.conf.js"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^8.34.0",
+    "@wdio/local-runner": "^8.34.0",
+    "@wdio/mocha-framework": "^8.34.0",
+    "@wdio/spec-reporter": "^8.34.0",
+    "chai": "^4.4.1",
+    "webdriverio": "^8.34.0"
+  }
+}
