@@ -1,5 +1,8 @@
 name: QA Automation - Mobile Challenge
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ "main" ]
