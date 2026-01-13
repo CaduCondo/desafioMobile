@@ -31,18 +31,12 @@ jobs:
         if: always()
         run: |
           npm install -g allure-commandline
-          allure generate reports/allure-results -o reports/allure-report --clean
+          allure generate reports/allure-results -o allure-report --clean
 
       - name: Deploy Allure Report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports/allure-report
-
-      - name: Upload Allure Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: reports/allure-report
+          publish_dir: allure-report
+          force_orphan: true
