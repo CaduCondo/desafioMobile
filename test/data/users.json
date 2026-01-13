@@ -1,5 +1,16 @@
 
 {
+<<<<<<< HEAD
   "valid": { "email": "test@mail.com", "password": "123456" },
   "invalid": { "email": "invalid", "password": "123456" }
+=======
+  "validUser": {
+    "email": "test@mail.com",
+    "password": "123456"
+  },
+  "invalidUser": {
+    "email": "invalid@mail.com",
+    "password": "123456"
+  }
+>>>>>>> 5c0c1a34233fcae625a4de36fed2127ff8cfe9e5
 }

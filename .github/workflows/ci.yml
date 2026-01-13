@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 name: QA Automation CI
 
@@ -5,6 +6,17 @@ on: [push, pull_request]
 
 jobs:
   test:
+=======
+name: QA Automation - Mobile Challenge
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+
+jobs:
+  tests:
+>>>>>>> 5c0c1a34233fcae625a4de36fed2127ff8cfe9e5
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +32,7 @@ jobs:
         run: npm install
 
       - name: Executar testes
+<<<<<<< HEAD
         run: npm run test:ci
 
       - name: Upload Extent Report
@@ -28,3 +41,6 @@ jobs:
         with:
           name: extent-report
           path: reports/extent
+=======
+        run: npm test
+>>>>>>> 5c0c1a34233fcae625a4de36fed2127ff8cfe9e5
