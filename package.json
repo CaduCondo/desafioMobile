@@ -11,8 +11,8 @@
   "@wdio/local-runner": "^8.34.0",
   "@wdio/mocha-framework": "^8.34.0",
   "@wdio/spec-reporter": "^8.34.0",
-  "@wdio/extent-reporter": "^8.0.0",
-  "chai": "^4.4.1",
-  "webdriverio": "^8.34.0"
+  "@wdio/allure-reporter": "^8.34.0",
+  "webdriverio": "^8.34.0",
+  "chai": "^4.4.1"
   }
 }

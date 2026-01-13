@@ -23,10 +23,10 @@ exports.config = {
 
   reporters: [
   'spec',
-  ['extent', {
-    outputDir: 'reports/extent',
-    reportTitle: 'QA Automation Report',
-    takeScreenshotsDuringTests: false
+  ['allure', {
+    outputDir: 'reports/allure-results',
+    disableWebdriverStepsReporting: true,
+    disableWebdriverScreenshotsReporting: false
   }]
 ],
   mochaOpts: {
