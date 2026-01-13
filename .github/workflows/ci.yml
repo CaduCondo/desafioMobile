@@ -2,7 +2,7 @@ name: QA Automation - Mobile Challenge
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   pull_request:
 
 jobs:
@@ -18,17 +18,24 @@ jobs:
         with:
           node-version: 18
 
-      - name: Instalar dependências
+      - name: Install dependencies
         run: npm install
 
-      - name: Executar testes
+      - name: Run tests
         run: npm run test:ci
 
-      - name: Gerar Allure Report
+      - name: Generate Allure Report
         if: always()
         run: |
           npm install -g allure-commandline
           allure generate reports/allure-results -o reports/allure-report --clean
+
+      - name: Deploy Allure Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: reports/allure-report
 
       - name: Upload Allure Report
         if: always()
